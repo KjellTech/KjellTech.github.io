@@ -61,6 +61,9 @@ I = Ia + Id + Is, Ia: ambient light, Id: diffuse (non shiny) reflection, Is: spe
 
 <a href = "http://rawgit.com/KjellTech/three.js.demos/master/DEM/index.html">DigitalElevationModel</a>
 <br>
-Reads a png elevation raster from file. Calls the ESRI World_Imagery satelite image REST service and drapes the image on the elevation raster.
+Reads elevation from a 8 bit unsigned integer png into a texture. Read colors from a png RGB satelite image into another texture.
+Pass both textures to the shaders using <b>ShaderMaterial</b>. Use the elevation texture to set z in the vertex shader. 
+Use the color texture to set the color in the fragment shader. The result is a satelite image draped onto an elevation model. 
+<br>
   </body>
 </html>
